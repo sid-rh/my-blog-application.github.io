@@ -1,0 +1,25 @@
+<div class="create-link-container">
+    <a href="/create" class="create-link">Create a new blog</a>
+</div>
+
+<% blogPost.forEach((blog)=>{ %>
+
+    <section id="all-contents">
+        <div class="inside">
+            <div class="title">
+                <%=blog.title%>
+            </div>
+            <div class="image-container">
+                <img src="<%=blog.img_url%>" alt="" class="image">
+            </div>
+            <span></span>
+            <div class="btn-container">
+                <a href="/show/<%=blog.id%>" class="btn">Show more</a>
+            </div>
+            <p>
+                <%=blog.created%>
+            </p>
+            <div class="hr"></div>
+        </div>
+    </section>
+    <% }) %>

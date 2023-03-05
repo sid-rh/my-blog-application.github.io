@@ -1,0 +1,23 @@
+<% blog.forEach((blog)=>{ %>
+    <section id="show">
+        <div class="inside">
+            <div class="image">
+                <img src="<%=blog.img_url%>" alt="">
+            </div>
+            <div class="contents">
+                <div class="title">
+                    <%=blog.title%>
+                </div>
+                <p class="description">
+                    <%=blog.description%>
+
+                </p>
+                <div class="show-btn">
+                    <a href="/delete/<%=blog.id%>" class="delete-btn">Delete</a>
+                    <a href="/edit/<%=blog.id%>" class="delete-btn">Edit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% }) %>
